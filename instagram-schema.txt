@@ -64,9 +64,10 @@ Table hashtags {
   title VARCHAR(20)
 }
 
-Table hashtags_posts{
+Table hashtags_posts {
   id SERIAL [pk,increment]
   post_id INTEGER [ref: > posts.id]
+  hashtag_id INTEGER [ref: > hashtags.id]
 }
 
 Table followers{
